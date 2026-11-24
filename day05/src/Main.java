@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
         List<Shape> shapes = List.of(
                 new Circle(1),
-                new Rectangle(2,3),
-                new Square(3)
+                new Square(3),
+                new Rectangle(2,3)
+
         );
 
         for(Shape s : shapes){
@@ -23,8 +24,9 @@ public class Main {
         for(Shape s : shapes){
             if(max < s.area()){
                  max = s.area();
+                res = s.getName();
             }
-            res = s.getName();
+
 
         }
         System.out.println(res);
@@ -61,4 +63,4 @@ public class Main {
 //1.потому что мы сделали override() так что он использует метод площади круга
 //2.компиляция потому что это не доходит до ран и по дефолту на джаве вызывается
 // супер но без параметров так что это будет ошибкой
-//3.у нас уже есть конструктор который проверяет
+//3.это полиморфизм он делает всю работу типо у каждого класса правильный метол выводится

@@ -10,13 +10,5 @@ public class Square extends Rectangle{
         return side;
     }
 
-    @Override
-    double area(){
-        return Math.pow(side,2);
-    }
 
-    @Override
-    double perimeter(){
-        return 4 * side;
-    }
 }
