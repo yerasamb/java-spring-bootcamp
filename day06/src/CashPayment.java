@@ -14,6 +14,7 @@ final class CashPayment implements Payment{
         if(amount <= 0) throw new IllegalArgumentException("Сумма должна быть больше нули");
         if(amount <= cash){
             System.out.println("Сдача: " + (cash - amount));
+            cash -= amount;
             return true;
         }
         return false;

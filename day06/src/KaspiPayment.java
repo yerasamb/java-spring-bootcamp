@@ -16,6 +16,10 @@ final class KaspiPayment implements Payment{
             System.out.println("Отказано: Лимит");
             return false;
         }
-        return !(balance < amount);
+        if(amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 }

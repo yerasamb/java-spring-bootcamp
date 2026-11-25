@@ -12,6 +12,10 @@ final class CardPayment implements Payment{
     @Override
     public boolean pay(double amount){
         if(amount <= 0) throw new IllegalArgumentException("Сумма должна быть больше нули");
-        return !(balance < amount);
+        if(amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 }
