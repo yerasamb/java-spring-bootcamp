@@ -5,7 +5,7 @@ public class Order {
 
     Order(){
         counter++;
-        this.id = 1;
+        this.id = counter;
         this.status = OrderStatus.NEW;
     }
 
